@@ -1,0 +1,68 @@
+####regester user
+post http://localhost:4000/user/register
+Content-Type: application/json
+
+{
+    "fullName": "jonah Kiptoo",
+   "email":"jonahkiptoo@yopmail.com",
+    "password": "2303nP2?/023Jitu."
+}
+
+#####get all users
+
+get http://localhost:4000/user
+token :eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6ImpvbmFoIEtpcHRvbyIsImVtYWlsIjoiam9uYWhraXB0b29AeW9wbWFpbC5jb20iLCJpZCI6ImM4NjZlOGFlLWM0YjctNGQzYy04ZjdhLWNmOGE4MDI3OTkyOSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3MDAyOTg1NDIsImV4cCI6MTcwMDM4NDk0Mn0.579deD6Zdxrm2L7UXVO6oolOfsFTQr89Emc-o44Gmf0
+
+#####get one user by id
+get http://localhost:4000/user/c866e8ae-c4b7-4d3c-8f7a-cf8a80279929
+token :eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6ImpvbmFoIEtpcHRvbyIsImVtYWlsIjoiam9uYWhraXB0b29AeW9wbWFpbC5jb20iLCJpZCI6ImM4NjZlOGFlLWM0YjctNGQzYy04ZjdhLWNmOGE4MDI3OTkyOSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3MDAyOTg3ODcsImV4cCI6MTcwMDM4NTE4N30.NT0fBNKjCA2l2IVELEoxQkCs8Q2aOBsN7h8hs-sc-B4
+
+####login user
+####login user 
+
+post http://localhost:4000/user/login
+Content-Type: application/json
+
+{
+    "email":"job@yopmail.com",
+    "password": "2303nP2?/023Jitu."
+}
+
+
+#####update user
+
+put http://localhost:4000/user
+token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6ImpvbmFoIEtpcHRvbyIsImVtYWlsIjoiam9uYWhraXB0b29AeW9wbWFpbC5jb20iLCJpZCI6ImM4NjZlOGFlLWM0YjctNGQzYy04ZjdhLWNmOGE4MDI3OTkyOSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3MDAyOTc5NTcsImV4cCI6MTcwMDM4NDM1N30.wo8P8YzYLVl1g4nm1FNOwbgP6syzJZrNuyyj8Hjbp9E
+Content-Type: application/json
+
+{
+    "id":"1fc3bc90-dc27-41f8-9080-e1ced7a8362e",
+    "fullName": "mogutu",
+    "email":"mogutu@thejitu.com"
+}
+
+
+##### delete user by ID
+delete http://localhost:4000/user/1fc3bc90-dc27-41f8-9080-e1ced7a8362e
+token :eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6ImpvbmFoIEtpcHRvbyIsImVtYWlsIjoiam9uYWhraXB0b29AeW9wbWFpbC5jb20iLCJpZCI6ImM4NjZlOGFlLWM0YjctNGQzYy04ZjdhLWNmOGE4MDI3OTkyOSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3MDAyOTg3ODcsImV4cCI6MTcwMDM4NTE4N30.NT0fBNKjCA2l2IVELEoxQkCs8Q2aOBsN7h8hs-sc-B4
+
+### check user details
+get http://localhost:4000/user/check_user_details
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6ImpvbmFoIEtpcHRvbyIsImVtYWlsIjoiam9uYWhraXB0b29AeW9wbWFpbC5jb20iLCJpZCI6ImM4NjZlOGFlLWM0YjctNGQzYy04ZjdhLWNmOGE4MDI3OTkyOSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3MDAyOTg3ODcsImV4cCI6MTcwMDM4NTE4N30.NT0fBNKjCA2l2IVELEoxQkCs8Q2aOBsN7h8hs-sc-B4
+
+#### forgot password
+post http://localhost:4000/user/forgot
+Content-Type: application/json
+
+{
+    "email":"silvia4@thejitu.com"
+}
+
+##### reset password
+post http://localhost:4000/user/reset
+Content-Type: application/json
+
+{
+    "id" : "15b33325-2afb-47cb-8c3c-b216eab706c7",
+    "password" : "@Qwerty123"
+}

@@ -1,0 +1,18 @@
+.booking{
+    background-color: transparent;
+    border-radius: 10px;
+    
+}
+
+:hover .booking{
+    background-color: #6c8dfa;
+}
+
+.date{
+    opacity: 0.3;
+    
+}
+
+.price{
+    color: red;
+}

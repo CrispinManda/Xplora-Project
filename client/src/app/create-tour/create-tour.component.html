@@ -1,0 +1,68 @@
+<app-navbar></app-navbar>
+
+<body class="bg-gray-100">
+  <div class="min-h-screen flex items-center justify-center">
+    <div class="max-w-md w-full p-6 bg-white rounded-lg shadow-lg">
+      <h1 class="text-2xl font-semibold text-center text-gray-500 mt-8 mb-6">Create Tour</h1>
+      <form [formGroup]="createTourForm" (ngSubmit)="submitForm()">
+        <div class="mb-4">
+          <label for="tour_name" class="block mb-2 text-sm text-gray-600">Tour Name</label>
+          <input type="text" id="tour_name" formControlName="tour_name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" required>
+          <div *ngIf="createTourForm.get('tour_name')?.hasError('required')" class="text-red-500 text-sm">Tour Name is required</div>
+        </div>
+      
+        <div class="mb-4">
+          <label for="tour_description" class="block mb-2 text-sm text-gray-600">Tour Description</label>
+          <input type="text" id="tour_description" formControlName="tour_description" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" required>
+          <div *ngIf="createTourForm.get('tour_description')?.hasError('required')" class="text-red-500 text-sm">Tour Description is required</div>
+        </div>
+      
+        <div class="mb-4">
+          <label for="tour_img" class="block mb-2 text-sm text-gray-600">Tour Image URL</label>
+          <input type="text" id="tour_img" formControlName="tour_img" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" required>
+          <div *ngIf="createTourForm.get('tour_img')?.hasError('required')" class="text-red-500 text-sm">Tour Image URL is required</div>
+        </div>
+      
+        <div class="mb-4">
+          <label for="price" class="block mb-2 text-sm text-gray-600">Price</label>
+          <input type="text" id="price" formControlName="price" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" required>
+          <div *ngIf="createTourForm.get('price')?.hasError('required')" class="text-red-500 text-sm">Price is required</div>
+        </div>
+      
+        <div class="mb-4">
+          <label for="start_date" class="block mb-2 text-sm text-gray-600">Tour Start Date</label>
+          <input type="text" id="start_date" formControlName="start_date" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 datepicker" required>
+          <div *ngIf="createTourForm.get('start_date')?.hasError('required')" class="text-red-500 text-sm">Start Date is required</div>
+        </div>
+      
+        <div class="mb-4">
+          <label for="end_date" class="block mb-2 text-sm text-gray-600">Tour End Date</label>
+          <input type="text" id="end_date" formControlName="end_date" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 datepicker" required>
+          <div *ngIf="createTourForm.get('end_date')?.hasError('required')" class="text-red-500 text-sm">End Date is required</div>
+        </div>
+      
+        <!-- Add other form controls as needed -->
+      
+        <button type="submit" [disabled]="createTourForm.invalid" class="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          Submit
+        </button>
+      </form>
+      
+      
+
+      <p class="text-xs text-gray-600 text-center mt-8">&copy; 2023 X-plora. </p>
+    </div>
+  </div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
